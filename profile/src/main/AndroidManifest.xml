@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.nbs.profile">
+
+    <dist:module
+            dist:onDemand="true"
+            dist:title="@string/title_profile">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application>
+        <activity android:name=".ProfileActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="sidiqapp"
+                    android:host="page"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
